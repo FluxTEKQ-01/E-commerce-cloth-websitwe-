@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Shop | CHURCH &amp; CO.</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#ffdbd0",
+                        "on-primary": "#ffffff",
+                        "background": "#fcf9f8",
+                        "on-primary-fixed": "#1c1b1b",
+                        "secondary-fixed": "#e3e2e2",
+                        "secondary-fixed-dim": "#c7c6c6",
+                        "on-primary-fixed-variant": "#474646",
+                        "surface-container": "#f0edec",
+                        "inverse-primary": "#c9c6c5",
+                        "on-primary-container": "#858383",
+                        "primary": "#000000",
+                        "on-error-container": "#93000a",
+                        "surface-tint": "#5f5e5e",
+                        "surface-container-low": "#f6f3f2",
+                        "outline-variant": "#c4c7c7",
+                        "secondary": "#5e5e5e",
+                        "surface-bright": "#fcf9f8",
+                        "surface-container-highest": "#e5e2e1",
+                        "surface-dim": "#dcd9d9",
+                        "tertiary-container": "#390c00",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#e5e2e1",
+                        "on-background": "#1c1b1b",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#390c00",
+                        "on-tertiary-fixed-variant": "#832600",
+                        "on-error": "#ffffff",
+                        "on-surface": "#1c1b1b",
+                        "on-secondary-container": "#646464",
+                        "inverse-on-surface": "#f3f0ef",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "primary-fixed": "#e5e2e1",
+                        "on-secondary-fixed-variant": "#464747",
+                        "on-tertiary": "#ffffff",
+                        "secondary-container": "#e3e2e2",
+                        "primary-fixed-dim": "#c9c6c5",
+                        "outline": "#747878",
+                        "tertiary-fixed-dim": "#ffb59d",
+                        "inverse-surface": "#313030",
+                        "surface": "#fcf9f8",
+                        "tertiary": "#000000",
+                        "on-tertiary-container": "#e25621",
+                        "primary-container": "#1c1b1b",
+                        "on-surface-variant": "#444748",
+                        "error": "#ba1a1a",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#ebe7e7"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1440px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Playfair Display"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Playfair Display"],
+                        "body-md": ["Inter"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "headline-xl-mobile": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "label-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["48px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-lg-mobile": ["48px", { "lineHeight": "1.1", "fontWeight": "700" }],
+                        "headline-xl-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "display-lg": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined[data-weight="fill"] {
+            font-variation-settings: 'FILL' 1;
+        }
+        
+        /* Custom scrollbar for filter area */
+        .filter-scroll::-webkit-scrollbar {
+            width: 4px;
+        }
+        .filter-scroll::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .filter-scroll::-webkit-scrollbar-thumb {
+            background: #e5e2e1;
+        }
+        
+        /* Product card hover setup */
+        .product-image-container {
+            position: relative;
+            overflow: hidden;
+        }
+        .product-image-alt {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        .product-card:hover .product-image-alt {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md antialiased pt-24">
+<!-- Navigation Shell (TopNavBar) -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-8 bg-background/90 backdrop-blur-sm">
+<div class="flex items-center gap-8">
+<a class="font-headline-xl text-headline-xl tracking-tighter text-primary dark:text-on-primary md:text-headline-xl text-headline-xl-mobile" href="#">CHURCH &amp; CO.</a>
+<div class="hidden md:flex items-center gap-6">
+<a class="font-label-sm text-label-sm tracking-[0.2em] uppercase text-primary dark:text-on-primary border-b border-primary dark:border-on-primary pb-1 scale-95 transition-transform duration-200" href="#">Shop</a>
+<a class="font-label-sm text-label-sm tracking-[0.2em] uppercase text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-on-primary transition-colors duration-300" href="#">Collections</a>
+<a class="font-label-sm text-label-sm tracking-[0.2em] uppercase text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-on-primary transition-colors duration-300" href="#">New Arrivals</a>
+<a class="font-label-sm text-label-sm tracking-[0.2em] uppercase text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-on-primary transition-colors duration-300" href="#">Lookbook</a>
+<a class="font-label-sm text-label-sm tracking-[0.2em] uppercase text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-on-primary transition-colors duration-300" href="#">Journal</a>
+</div>
+</div>
+<div class="flex items-center gap-4 text-primary dark:text-on-primary">
+<button class="hover:opacity-70 transition-opacity duration-300 p-2"><span class="material-symbols-outlined" data-icon="search">search</span></button>
+<button class="hover:opacity-70 transition-opacity duration-300 p-2"><span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span></button>
+<button class="md:hidden hover:opacity-70 transition-opacity duration-300 p-2"><span class="material-symbols-outlined" data-icon="menu">menu</span></button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-8 md:py-12 flex flex-col md:flex-row gap-gutter">
+<!-- Left Filter Panel (Desktop) / Hidden Mobile -->
+<aside class="hidden md:block w-64 flex-shrink-0 pr-8 border-r border-surface-variant sticky top-32 h-[calc(100vh-8rem)] filter-scroll overflow-y-auto">
+<div class="mb-12">
+<h3 class="font-label-sm text-label-sm tracking-[0.1em] text-primary uppercase mb-6">Category</h3>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-primary font-semibold flex items-center justify-between group" href="#">All Outerwear <span class="material-symbols-outlined text-sm opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span></a></li>
+<li><a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors" href="#">Essentials</a></li>
+<li><a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors" href="#">Denim</a></li>
+<li><a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors" href="#">Accessories</a></li>
+<li><a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors" href="#">Footwear</a></li>
+</ul>
+</div>
+<div class="mb-12">
+<h3 class="font-label-sm text-label-sm tracking-[0.1em] text-primary uppercase mb-6">Size</h3>
+<div class="grid grid-cols-3 gap-2">
+<button class="border border-outline-variant text-secondary font-label-sm text-label-sm py-2 hover:border-primary hover:text-primary transition-colors">XS</button>
+<button class="border border-primary bg-primary text-on-primary font-label-sm text-label-sm py-2 transition-colors">S</button>
+<button class="border border-outline-variant text-secondary font-label-sm text-label-sm py-2 hover:border-primary hover:text-primary transition-colors">M</button>
+<button class="border border-outline-variant text-secondary font-label-sm text-label-sm py-2 hover:border-primary hover:text-primary transition-colors">L</button>
+<button class="border border-outline-variant text-secondary font-label-sm text-label-sm py-2 hover:border-primary hover:text-primary transition-colors">XL</button>
+</div>
+</div>
+<div>
+<h3 class="font-label-sm text-label-sm tracking-[0.1em] text-primary uppercase mb-6">Color</h3>
+<div class="flex flex-wrap gap-3">
+<button aria-label="Black" class="w-6 h-6 rounded-full bg-primary border border-outline-variant ring-1 ring-offset-2 ring-primary"></button>
+<button aria-label="White" class="w-6 h-6 rounded-full bg-surface-container-lowest border border-outline-variant"></button>
+<button aria-label="Grey" class="w-6 h-6 rounded-full bg-[#8A8D8F] border border-outline-variant"></button>
+<button aria-label="Olive" class="w-6 h-6 rounded-full bg-[#4A5D23] border border-outline-variant"></button>
+<button aria-label="Oxblood" class="w-6 h-6 rounded-full bg-[#8B0000] border border-outline-variant"></button>
+</div>
+</div>
+</aside>
+<!-- Product Grid Area -->
+<section class="flex-grow">
+<!-- Toolbar -->
+<div class="flex justify-between items-center mb-8 border-b border-surface-variant pb-4">
+<p class="font-body-md text-body-md text-secondary">Showing 24 Results</p>
+<div class="flex items-center gap-4">
+<button class="md:hidden flex items-center gap-2 font-label-sm text-label-sm uppercase tracking-[0.1em] text-primary">
+<span class="material-symbols-outlined text-[18px]">tune</span> Filter
+                    </button>
+<div class="relative group">
+<button class="flex items-center gap-2 font-label-sm text-label-sm uppercase tracking-[0.1em] text-primary hover:opacity-70 transition-opacity">
+                            Sort By: Featured <span class="material-symbols-outlined text-[18px]">expand_more</span>
+</button>
+<!-- Simple hover dropdown for sorting -->
+<div class="absolute right-0 top-full mt-2 w-48 bg-surface-container-lowest border border-surface-variant shadow-sm opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-20">
+<a class="block px-4 py-3 font-body-md text-body-md text-primary bg-surface-container-low" href="#">Featured</a>
+<a class="block px-4 py-3 font-body-md text-body-md text-secondary hover:bg-surface-container-low transition-colors" href="#">Price: Low to High</a>
+<a class="block px-4 py-3 font-body-md text-body-md text-secondary hover:bg-surface-container-low transition-colors" href="#">Price: High to Low</a>
+<a class="block px-4 py-3 font-body-md text-body-md text-secondary hover:bg-surface-container-low transition-colors" href="#">Newest</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12">
+<!-- Product Card 1 -->
+<article class="product-card group cursor-pointer">
+<div class="product-image-container aspect-[3/4] bg-surface-container mb-4">
+<img alt="Model wearing structured black overcoat" class="w-full h-full object-cover" data-alt="A male model poses on a minimalist concrete street wearing a structured, avant-garde oversized black overcoat from a high-end streetwear collection. The lighting is stark and natural, creating high contrast shadows typical of editorial fashion photography. The mood is confident and urban, emphasizing the stark luxury minimalist aesthetic with a soft black and off-white color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVX3mUSFizKc6vQA1BnSMK9f7ZWLPTJORZbm-oUOiDTs0Dkk7WAPkv_OhSYITB1c-PNn18xpYoivHuTOBP0fLzMHGar6JTpBZb86bti9xNnIzGhiASEaH8WcpR-GIP0gWw3xB77BH8j0IwNZKMX2vL7klLW-IPFAomaZy8rKedxg4GAbzMedr23TXBzjWUQ2tQ7dnazvgPX_ivvR_XJLZbd62JEBwuPPtSeyFP6gu9EIFzqDMazfAq-bAbF_9XKyMYo15Ai0893Urc"/>
+<img alt="Back detail of structured black overcoat" class="product-image-alt" data-alt="A close-up shot focusing on the back details and structural tailoring of an oversized black overcoat worn by a model in an urban setting. High contrast lighting highlights the texture of the premium fabric against a muted concrete background. The aesthetic reflects luxury minimalism with sharp lines and high-fashion streetwear sensibility." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAt3i7reZn1e5Vny4UKGgPtZb-TK4S4AFZa_sAh61In7kPNDPd77rTk3zLJdJ8O6cEYFPLMMxTS3vxpW08wNjq9FCdqmTI3WAW5V6ntVcz0Y99GwjTMRxjmPKcyQdiAJmGSj3_g_sKQTOH-sFLuj-pLfXFX5-_aRxQY5W9xPgEghtZS2_jT3BTrykd2el1kBDQ9Tf4kik96ny6pC5N2mwAki4OMw3Z_btIBHbgmk_Uer5Iond-ppc56cIbcaXounSnPrgwBKk_hIS_h"/>
+<div class="absolute top-4 left-4 bg-primary text-on-primary px-3 py-1 font-label-sm text-label-sm uppercase tracking-[0.1em]">New Season</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h2 class="font-label-sm text-label-sm text-primary uppercase tracking-[0.1em] mb-1">Architectural Overcoat</h2>
+<p class="font-body-md text-body-md text-secondary">Heavyweight Wool</p>
+</div>
+<span class="font-headline-md text-headline-md text-primary">$850</span>
+</div>
+</article>
+<!-- Product Card 2 -->
+<article class="product-card group cursor-pointer">
+<div class="product-image-container aspect-[3/4] bg-surface-container mb-4">
+<img alt="Model in minimalist hoodie" class="w-full h-full object-cover" data-alt="A model wearing a minimalist, heavyweight beige hoodie from a luxury streetwear brand, standing against a stark white studio background. The lighting is high-key and soft, illuminating the structural drape of the garment. The image composition is asymmetric, reflecting a high-end editorial spread. The color palette relies on off-white and warm beige tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRTqCTbMxkbDe-s-gj9K5F7r1AbYkB0ep44ffyKSFHMTIE36ZK_jexgMme_S-zm9O9-OanxrmIoagHWrF45SQsRHXIFj_KTnGMdtdOB7S1B9yp7YBbnxuDgKR4f1EAZJv4MXbY6u_iT678TR_IK08bReepXEHea6DcTKJGxFTSNmRDmPWYCD0wjTDgFDY-3IuU2G-vLu7UxRyGSu-CrGdfprVRE83-ChznfQPvLVXM2zHWylAEpHXuUheH3445z-a23U60LLOf9hX2"/>
+<img alt="Detail of minimalist hoodie" class="product-image-alt" data-alt="Detail shot of the textured fabric and precise stitching on a minimalist heavyweight beige hoodie. The studio lighting casts soft shadows that emphasize the high-quality material and construction. The aesthetic is clean, modern, and aligned with luxury minimalism, focusing strictly on form and texture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJdHfktdskiPEbFfrHydwRzZrCKbHBO8Nr_KankyOcaUEC5UAHqjS_vjo2MoCwZmHYtroRuiCCowVTbuRdgpHuM1xIF1sFNgW7epdi7uOuvi0IVsgKgWKlOCwyfPM2ucY-DeAOcdBgMj-RxPSRv-GOoje4sYjKndG9gSDrs9vLotUA9hTjHLvwpGT-tBDGEDqsLErgAHHyk0esLGbyDaLGZrOzpX1di9nC2rfJsH3A0C-Jl2lpT82UNMabsEJCuGyYzVbml-2FnukX"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h2 class="font-label-sm text-label-sm text-primary uppercase tracking-[0.1em] mb-1">Structure Hoodie</h2>
+<p class="font-body-md text-body-md text-secondary">450GSM French Terry</p>
+</div>
+<span class="font-headline-md text-headline-md text-primary">$180</span>
+</div>
+</article>
+<!-- Product Card 3 -->
+<article class="product-card group cursor-pointer">
+<div class="product-image-container aspect-[3/4] bg-surface-container mb-4">
+<img alt="Raw denim jacket" class="w-full h-full object-cover" data-alt="A fashion shot of a raw indigo denim jacket styled over a white t-shirt, set against an industrial concrete wall. The lighting is dramatic and directional, creating a moody, high-contrast look suitable for a premium streetwear editorial. The focus is on the rigid texture of the denim and the clean, architectural silhouette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8I_bws3PfcL149oweVxKfZRpP4HdCCK6FN3nd-Y7ApnVjvucBNfzGcBuJq7JhfbqkiHBcJCGNAoN0_9ldDTyi4DSn_4kqJW9_tNvKhBj5B8SX6Z2Nev-MFkeM-RWBciVXMIG1NADmr4P9JZQyVBVSCgwrevX6DJ7IJejghZZzvDT3g6XOZaU46QQQCoXwCeZXtK5H7OtF3zKgMQGNq_HOUtQPoTD7swwVM7rhG9yh3r0tr4m94971ZDsRE3MS3nj3Slz-vfpCSN4n"/>
+<img alt="Denim jacket alternate angle" class="product-image-alt" data-alt="An alternate angle of a raw indigo denim jacket showing the precise fit and custom silver hardware detailing. The model is turned slightly, highlighting the garment's structure against an industrial background. The style is raw, confident luxury streetwear with a focus on high-contrast editorial photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmcm-XPfylocAmHx596973BWCLJreJgCRquM45tAZQZ0EegpBL0dEmvFjDP-cBT0FI8K0evkuQVzM6LSlivxgOT_PP9t47Q0M5Ux4Hklfoo25_p-jr-nlu756DpjaDOaPw3PYfcuEUjQ2r-Ocy9pFCheAnaqsvUbInOgIUNnzZynuALbTPW7_2K7vsodhroLzPKZw1go8A2lYFGWSIMjwW9pM2OAMz_ZYJoygBAkf6iD-JUq3twFodIehWkungHPidcVEv0X9kknTl"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h2 class="font-label-sm text-label-sm text-primary uppercase tracking-[0.1em] mb-1">Raw Selvedge Jacket</h2>
+<p class="font-body-md text-body-md text-secondary">Japanese Denim</p>
+</div>
+<span class="font-headline-md text-headline-md text-primary">$320</span>
+</div>
+</article>
+<!-- Product Card 4 -->
+<article class="product-card group cursor-pointer">
+<div class="product-image-container aspect-[3/4] bg-surface-container mb-4">
+<img alt="Oversized white button down" class="w-full h-full object-cover" data-alt="A fashion model wearing an exaggerated, oversized white poplin button-down shirt. The shot is composed asymmetrically against a stark, high-key white background, typical of avant-garde fashion editorials. The sharp lines of the shirt collar contrast with the voluminous sleeves, emphasizing a luxury minimalist approach to everyday essentials." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYSb7Eqatny7BR6vvSYR69cx6fQhZ-Ty_WDGqqd4OfJ-nZ8F4gHR09twd8pckH2cL3zHed7xhSuv5mLCY2Q1oCY_pedFYJzLB9f3_g3lE-NEBMZTpFIMpVBmUJEhNVR-pQomp2CNNLUfmwv0fYSDx1gf5UExf1mVZe31G0GqJ_DynQsVv5dZ0nxExGWF_oMnZcDJNbzppUfS7mZwA21mh1Ls1AecQQKJLlDoSijZpI4vw577Y-swfGCnWWjWqEDJt_vhFw2PkHHS3c"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h2 class="font-label-sm text-label-sm text-primary uppercase tracking-[0.1em] mb-1">Volume Shirt</h2>
+<p class="font-body-md text-body-md text-secondary">Crisp Cotton Poplin</p>
+</div>
+<span class="font-headline-md text-headline-md text-primary">$210</span>
+</div>
+</article>
+</div>
+<!-- Load More -->
+<div class="mt-16 flex justify-center">
+<button class="bg-transparent border border-primary text-primary px-8 py-3 font-label-sm text-label-sm uppercase tracking-[0.1em] hover:bg-primary hover:text-on-primary transition-colors duration-300">
+                    Load More
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="w-full px-margin-mobile md:px-margin-desktop py-20 flex flex-col md:flex-row justify-between items-start gap-gutter bg-primary dark:bg-surface-container-lowest text-on-primary dark:text-primary mt-24">
+<div class="flex flex-col gap-6 max-w-sm">
+<h2 class="font-headline-xl text-headline-xl text-on-primary dark:text-primary">CHURCH &amp; CO.</h2>
+<p class="font-label-sm text-label-sm tracking-[0.1em] uppercase text-secondary-fixed-dim dark:text-secondary">© 2024 CHURCH &amp; CO. BENGALURU. ALL RIGHTS RESERVED.</p>
+</div>
+<div class="flex flex-col md:flex-row gap-12 md:gap-24">
+<div class="flex flex-col gap-4">
+<a class="font-label-sm text-label-sm tracking-[0.1em] uppercase text-secondary-fixed-dim dark:text-secondary hover:text-tertiary-fixed-dim transition-colors duration-300" href="#">Church St, Bengaluru</a>
+<a class="font-label-sm text-label-sm tracking-[0.1em] uppercase text-secondary-fixed-dim dark:text-secondary hover:text-tertiary-fixed-dim transition-colors duration-300" href="#">Instagram</a>
+<a class="font-label-sm text-label-sm tracking-[0.1em] uppercase text-secondary-fixed-dim dark:text-secondary hover:text-tertiary-fixed-dim transition-colors duration-300" href="#">TikTok</a>
+</div>
+<div class="flex flex-col gap-4">
+<a class="font-label-sm text-label-sm tracking-[0.1em] uppercase text-secondary-fixed-dim dark:text-secondary hover:text-tertiary-fixed-dim transition-colors duration-300" href="#">Newsletter</a>
+<a class="font-label-sm text-label-sm tracking-[0.1em] uppercase text-secondary-fixed-dim dark:text-secondary hover:text-tertiary-fixed-dim transition-colors duration-300" href="#">Privacy</a>
+</div>
+</div>
+</footer>
+</body></html>

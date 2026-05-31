@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>New Arrivals | CHURCH &amp; CO.</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#ffdbd0",
+                    "on-primary": "#ffffff",
+                    "background": "#fcf9f8",
+                    "on-primary-fixed": "#1c1b1b",
+                    "secondary-fixed": "#e3e2e2",
+                    "secondary-fixed-dim": "#c7c6c6",
+                    "on-primary-fixed-variant": "#474646",
+                    "surface-container": "#f0edec",
+                    "inverse-primary": "#c9c6c5",
+                    "on-primary-container": "#858383",
+                    "primary": "#000000",
+                    "on-error-container": "#93000a",
+                    "surface-tint": "#5f5e5e",
+                    "surface-container-low": "#f6f3f2",
+                    "outline-variant": "#c4c7c7",
+                    "secondary": "#5e5e5e",
+                    "surface-bright": "#fcf9f8",
+                    "surface-container-highest": "#e5e2e1",
+                    "surface-dim": "#dcd9d9",
+                    "tertiary-container": "#390c00",
+                    "on-secondary": "#ffffff",
+                    "surface-variant": "#e5e2e1",
+                    "on-background": "#1c1b1b",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed": "#390c00",
+                    "on-tertiary-fixed-variant": "#832600",
+                    "on-error": "#ffffff",
+                    "on-surface": "#1c1b1b",
+                    "on-secondary-container": "#646464",
+                    "inverse-on-surface": "#f3f0ef",
+                    "on-secondary-fixed": "#1b1c1c",
+                    "primary-fixed": "#e5e2e1",
+                    "on-secondary-fixed-variant": "#464747",
+                    "on-tertiary": "#ffffff",
+                    "secondary-container": "#e3e2e2",
+                    "primary-fixed-dim": "#c9c6c5",
+                    "outline": "#747878",
+                    "tertiary-fixed-dim": "#ffb59d",
+                    "inverse-surface": "#313030",
+                    "surface": "#fcf9f8",
+                    "tertiary": "#000000",
+                    "on-tertiary-container": "#e25621",
+                    "primary-container": "#1c1b1b",
+                    "on-surface-variant": "#444748",
+                    "error": "#ba1a1a",
+                    "error-container": "#ffdad6",
+                    "surface-container-high": "#ebe7e7",
+                    "electric-orange": "#FF4500" // Custom accent as per guidelines
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "container-max": "1440px",
+                    "margin-desktop": "64px",
+                    "margin-mobile": "20px",
+                    "gutter": "24px",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "headline-xl": ["Playfair Display"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Playfair Display"],
+                    "body-md": ["Inter"],
+                    "display-lg-mobile": ["Playfair Display"],
+                    "headline-xl-mobile": ["Playfair Display"],
+                    "display-lg": ["Playfair Display"],
+                    "label-sm": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-xl": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg-mobile": ["48px", {"lineHeight": "1.1", "fontWeight": "700"}],
+                    "headline-xl-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        /* Base Styles */
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        /* Utility for 1px Outline */
+        .border-outline-thin {
+            border: 1px solid theme('colors.outline');
+        }
+
+        /* Material Symbols Outlined Customization */
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            font-size: 24px;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+
+        /* Countdown specific styling */
+        .font-mono-countdown {
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+<!-- Navigation TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-desktop py-8 bg-transparent flat no shadows transition-all duration-300" id="main-nav">
+<div class="font-headline-xl text-headline-xl tracking-tighter text-primary dark:text-on-primary">
+            CHURCH &amp; CO.
+        </div>
+<nav class="hidden md:flex gap-gutter items-center">
+<ul class="flex gap-gutter font-label-sm text-label-sm tracking-[0.2em] uppercase">
+<li><a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-on-primary transition-colors duration-300 hover:opacity-70" href="#">Shop</a></li>
+<li><a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-on-primary transition-colors duration-300 hover:opacity-70" href="#">Collections</a></li>
+<!-- Active State -->
+<li><a class="text-primary dark:text-on-primary border-b border-primary dark:border-on-primary pb-1 scale-95 transition-transform duration-200" href="#">New Arrivals</a></li>
+<li><a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-on-primary transition-colors duration-300 hover:opacity-70" href="#">Lookbook</a></li>
+<li><a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-on-primary transition-colors duration-300 hover:opacity-70" href="#">Journal</a></li>
+</ul>
+</nav>
+<div class="flex gap-4 items-center">
+<button class="hover:opacity-70 transition-opacity duration-300">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="hover:opacity-70 transition-opacity duration-300">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-[120px] md:pt-[160px] px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<!-- Editorial Header Section -->
+<section class="mb-20 md:mb-32">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-end">
+<div class="col-span-1 md:col-span-8">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary uppercase leading-none">
+                        New This Week
+                    </h1>
+</div>
+<div class="col-span-1 md:col-span-4 pb-2 md:pb-4">
+<p class="font-body-md text-body-md text-secondary">
+                        The latest drops from our atelier. High-octane streetwear meets heritage architecture. Limited quantities available.
+                    </p>
+</div>
+</div>
+<!-- Horizontal Divider -->
+<div class="w-full h-px bg-outline mt-8"></div>
+</section>
+<!-- The "Drop" Highlight (Asymmetric Hero) -->
+<section class="mb-20 md:mb-32">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter relative">
+<!-- Main Image -->
+<div class="col-span-1 md:col-span-7 relative group cursor-pointer overflow-hidden bg-surface-container">
+<img alt="Drop Highlight" class="w-full h-[600px] object-cover filter grayscale hover:grayscale-0 transition-all duration-700" data-alt="A striking editorial fashion photograph of a model standing in an avant-garde, brutalist concrete structure. The model wears a stark, minimalist oversized structural jacket in deep charcoal black, contrasting with a pristine off-white background. The lighting is harsh and directional, creating stark geometric shadows that emphasize the architectural aesthetic. A subtle, high-energy electric orange accent is visible on the garment's brutalist hardware." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcgpMwVic4IuRZyGZP2A-N4xGWaIuJs3i7YNQnJb3v58hjGBuB0_Mw4FExSKxdaiYbkQpHIQ4wYDfIDCIdnKxY2XugtD0fYAzdeccBR6MjGO9PmHGo8DZvEJNMjAxPEm1BZPhpP9wyWrrjkUXxgCaj3k16EK0AcPqIMF5ZFRygZZAD922BoZ9MyzaGSRNahRLd6Pk7j8JvOY9pXU4qjHafLtR-KoWa7MApxnlqSttwa5FYtgxiZIsehgp3LVyPrFsJ4vrpMgzqaSZz"/>
+<!-- Drop Timer Overlay -->
+<div class="absolute bottom-6 left-6 bg-primary text-on-primary px-4 py-2 flex flex-col gap-1 border border-outline-thin">
+<span class="font-label-sm text-label-sm tracking-[0.2em] uppercase text-electric-orange">Drop 001 / Live</span>
+<span class="font-mono-countdown text-headline-md tracking-widest" id="countdown-timer">24:00:00</span>
+</div>
+</div>
+<!-- Product Details Offset -->
+<div class="col-span-1 md:col-span-4 md:col-start-9 flex flex-col justify-center mt-8 md:mt-0 pt-0 md:pt-32">
+<div class="flex items-center gap-2 mb-4">
+<div class="w-2 h-2 rounded-full bg-electric-orange animate-pulse"></div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary">Exclusive Release</span>
+</div>
+<h2 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-primary mb-2">Architectonic Trench</h2>
+<p class="font-body-md text-body-md text-secondary mb-8">
+                        Structured lines drawn from modernist concrete forms. Heavyweight cotton canvas with matte black hardware.
+                    </p>
+<div class="flex items-center justify-between mb-8 pb-4 border-b border-outline">
+<span class="font-headline-md text-headline-md text-primary">₹ 24,500</span>
+<span class="font-label-sm text-label-sm text-secondary">Only 50 pieces</span>
+</div>
+<button class="bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-widest py-4 px-8 rounded hover:bg-electric-orange transition-colors duration-300 w-full text-center">
+                        Secure Piece
+                    </button>
+</div>
+</div>
+</section>
+<!-- Product Grid -->
+<section class="mb-32">
+<div class="flex justify-between items-center mb-12 border-b border-outline pb-4">
+<h3 class="font-headline-md text-headline-md text-primary">Latest Additions</h3>
+<div class="flex gap-4">
+<span class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-secondary cursor-pointer hover:text-primary transition-colors">View All</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-gutter gap-y-16">
+<!-- Product 1 -->
+<div class="group cursor-pointer">
+<div class="relative w-full aspect-[3/4] bg-surface-container overflow-hidden mb-4 border border-transparent group-hover:border-outline-thin transition-colors">
+<div class="absolute top-4 left-4 z-10 bg-electric-orange text-white px-2 py-1 font-label-sm text-[10px] tracking-widest uppercase">
+                            New
+                        </div>
+<img alt="Product 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A minimalist flat-lay photograph of a high-end, structured menswear shirt in warm beige, laid perfectly flat against an off-white background. The lighting is soft but crisp, highlighting the sharp geometric tailoring and premium cotton texture. There are no props, focusing entirely on the architectural silhouette of the garment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsK1K07juMgey7tTE_TpNnwiCoQkD3ztJSDjDV802d4YdBj6GL2SsHCa-WpzPi0-ox65meNcgxCk-CRSGhP3NhhlNTbRtBpiTN7l9mge_4dxxPDlc3659ODFmGqRHzokjzLlZyENv78c6R-ahmFrdi0kf_5prbCQ9I3apmh-xwcBKnQ6SQhLC0J8eDQ4GuI0ETxU9wa_-rRME0r1a14X7AARvzTAiTSGJNVcrsSEPtl3McTsL5ICO-gcVa9UMD9Jkdy-zw16hu51eW"/>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-1">Tops</span>
+<h4 class="font-body-md text-body-md text-primary font-semibold mb-1">Church St. Overshirt</h4>
+<span class="font-headline-md text-body-lg text-primary">₹ 8,900</span>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="group cursor-pointer">
+<div class="relative w-full aspect-[3/4] bg-surface-container overflow-hidden mb-4 border border-transparent group-hover:border-outline-thin transition-colors">
+<div class="absolute top-4 left-4 z-10 bg-electric-orange text-white px-2 py-1 font-label-sm text-[10px] tracking-widest uppercase">
+                            New
+                        </div>
+<img alt="Product 2" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A detail shot of a luxury streetwear jacket. The image focuses closely on the heavy charcoal black fabric and a matte silver utilitarian zipper. The texture is rough and industrial. The background is a soft, out-of-focus muted concrete gray, maintaining a sophisticated, high-contrast aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeEDOCeUOAM2dMlzUFn7FDlG98Tl0aQYXpnFEmuZJMoCa4VZfl32pwwWdHtpEAYZV9FwmtECzcUfu0hbIu4d_KqOrSaRW534zgCqn5acVpMoeTibd9gF4i0VN0MqiPEBopEu6TzCR1XDYGxuJiG3ON4bu1GPr4sEYicK2mmRCMoQtOM1C4tp7CDd9ZiIlyUkiF6gREdovMH5IQu61iCt4loZbzy5QFqMUSypJwfA8A0qG4yjSbjTtmrzNW9RMaB99CCU4k-U2h21R3"/>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-1">Outerwear</span>
+<h4 class="font-body-md text-body-md text-primary font-semibold mb-1">Brutalist Zip Jacket</h4>
+<span class="font-headline-md text-body-lg text-primary">₹ 18,200</span>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="group cursor-pointer">
+<div class="relative w-full aspect-[3/4] bg-surface-container overflow-hidden mb-4 border border-transparent group-hover:border-outline-thin transition-colors">
+<img alt="Product 3" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A clean, studio shot of wide-leg tailored trousers in soft black. The trousers hang perfectly straight, emphasizing the sharp, minimal silhouette. The background is pristine off-white, creating a stark contrast. The lighting mimics a high-fashion magazine editorial spread." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjSoOA0JFaH8yp-ev5X9_sfrRE7QRxrC97NenFYD21bqaIo6ntyJ9g1wNw2tTy2Zu7rdXC0gNBJljdQNscECpjD8b65MpyDq0trbKXK1JOwfzImgNRs97V83EQgJwN4T8jbtyXQLlOPo1hNg6oN90AgQysvagUZsxNoIo2DdWIFmUMqIdMrrQAAw7AbqCbQMjONtLuTwdu2VrVlls86Yd-BRSJwCvsRc8DVhflRFbczUB9kSXy1eysEdmokaCUPxluGS13PPqENq_m"/>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-1">Bottoms</span>
+<h4 class="font-body-md text-body-md text-primary font-semibold mb-1">Volume Trousers</h4>
+<span class="font-headline-md text-body-lg text-primary">₹ 12,500</span>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="group cursor-pointer">
+<div class="relative w-full aspect-[3/4] bg-surface-container overflow-hidden mb-4 border border-transparent group-hover:border-outline-thin transition-colors">
+<div class="absolute top-4 left-4 z-10 bg-electric-orange text-white px-2 py-1 font-label-sm text-[10px] tracking-widest uppercase">
+                            New
+                        </div>
+<img alt="Product 4" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="An editorial close-up of a premium leather accessory against a raw concrete texture. The leather is deep black with perfectly finished edges. A single sharp ray of light cuts across the composition, highlighting a subtle silver embossed logo. The overall mood is cold, architectural, and luxurious." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5qwEzNq7dydHDlWp62LCeU4vpsupBbIy9D4InudA6l5c5SG1QmU8EaqghY8lpKQAedIlYN9VzuOsDGTtTPiy4Wm0y4cF7mJuU4Mwb6UCozhkC6Te7EXFcmic8-RYkjozNz_4IjEBGDDrXxSQArwLJXmPU6RdN6p5Os3BjehMGXTB4QnKar6caxb7iHsu6oh0X8GXxKOWSOduDoWADiKlaUtC0ud6Fc-2AOatE770LEP4P6FfKxvkzTC7WFWVcyCVP9pzHK2aKovTM"/>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-1">Accessories</span>
+<h4 class="font-body-md text-body-md text-primary font-semibold mb-1">Utility Crossbody</h4>
+<span class="font-headline-md text-body-lg text-primary">₹ 6,400</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full px-margin-desktop py-20 flex flex-col md:flex-row justify-between items-start gap-gutter bg-primary dark:bg-surface-container-lowest border-t border-outline dark:border-outline-variant flat no shadows">
+<div class="font-headline-xl text-headline-xl text-on-primary dark:text-primary mb-8 md:mb-0">
+            CHURCH &amp; CO.
+        </div>
+<div class="flex flex-col md:flex-row gap-12 md:gap-24">
+<ul class="flex flex-col gap-4 font-label-sm text-label-sm tracking-[0.1em] uppercase">
+<li><a class="text-secondary-fixed-dim dark:text-secondary hover:text-tertiary-fixed-dim transition-colors duration-300 focus:ring-1 focus:ring-tertiary-fixed outline-none" href="#">Church St, Bengaluru</a></li>
+<li><a class="text-secondary-fixed-dim dark:text-secondary hover:text-tertiary-fixed-dim transition-colors duration-300 focus:ring-1 focus:ring-tertiary-fixed outline-none" href="#">Instagram</a></li>
+<li><a class="text-secondary-fixed-dim dark:text-secondary hover:text-tertiary-fixed-dim transition-colors duration-300 focus:ring-1 focus:ring-tertiary-fixed outline-none" href="#">TikTok</a></li>
+</ul>
+<ul class="flex flex-col gap-4 font-label-sm text-label-sm tracking-[0.1em] uppercase">
+<li><a class="text-secondary-fixed-dim dark:text-secondary hover:text-tertiary-fixed-dim transition-colors duration-300 focus:ring-1 focus:ring-tertiary-fixed outline-none" href="#">Newsletter</a></li>
+<li><a class="text-secondary-fixed-dim dark:text-secondary hover:text-tertiary-fixed-dim transition-colors duration-300 focus:ring-1 focus:ring-tertiary-fixed outline-none" href="#">Privacy</a></li>
+</ul>
+</div>
+<div class="w-full md:w-auto mt-12 md:mt-0 pt-8 md:pt-0 border-t border-outline md:border-none">
+<p class="font-label-sm text-label-sm tracking-[0.1em] uppercase text-secondary-fixed-dim dark:text-secondary">
+                 © 2024 CHURCH &amp; CO. BENGALURU. ALL RIGHTS RESERVED.
+             </p>
+</div>
+</footer>
+<!-- Simple JS for Nav shrink on scroll and Countdown -->
+<script>
+        // Nav background shrink effect
+        const nav = document.getElementById('main-nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-background', 'border-b', 'border-outline-thin');
+                nav.classList.remove('bg-transparent');
+            } else {
+                nav.classList.remove('bg-background', 'border-b', 'border-outline-thin');
+                nav.classList.add('bg-transparent');
+            }
+        });
+
+        // Mock Countdown Timer for effect
+        const countdownEl = document.getElementById('countdown-timer');
+        let hours = 23;
+        let minutes = 59;
+        let seconds = 59;
+
+        setInterval(() => {
+            seconds--;
+            if (seconds < 0) {
+                seconds = 59;
+                minutes--;
+                if (minutes < 0) {
+                    minutes = 59;
+                    hours--;
+                }
+            }
+            countdownEl.textContent = 
+                `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+        }, 1000);
+    </script>
+</body></html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Journal - CHURCH &amp; CO.</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#ffdbd0",
+                        "on-primary": "#ffffff",
+                        "background": "#fcf9f8",
+                        "on-primary-fixed": "#1c1b1b",
+                        "secondary-fixed": "#e3e2e2",
+                        "secondary-fixed-dim": "#c7c6c6",
+                        "on-primary-fixed-variant": "#474646",
+                        "surface-container": "#f0edec",
+                        "inverse-primary": "#c9c6c5",
+                        "on-primary-container": "#858383",
+                        "primary": "#000000",
+                        "on-error-container": "#93000a",
+                        "surface-tint": "#5f5e5e",
+                        "surface-container-low": "#f6f3f2",
+                        "outline-variant": "#c4c7c7",
+                        "secondary": "#5e5e5e",
+                        "surface-bright": "#fcf9f8",
+                        "surface-container-highest": "#e5e2e1",
+                        "surface-dim": "#dcd9d9",
+                        "tertiary-container": "#390c00",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#e5e2e1",
+                        "on-background": "#1c1b1b",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#390c00",
+                        "on-tertiary-fixed-variant": "#832600",
+                        "on-error": "#ffffff",
+                        "on-surface": "#1c1b1b",
+                        "on-secondary-container": "#646464",
+                        "inverse-on-surface": "#f3f0ef",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "primary-fixed": "#e5e2e1",
+                        "on-secondary-fixed-variant": "#464747",
+                        "on-tertiary": "#ffffff",
+                        "secondary-container": "#e3e2e2",
+                        "primary-fixed-dim": "#c9c6c5",
+                        "outline": "#747878",
+                        "tertiary-fixed-dim": "#ffb59d",
+                        "inverse-surface": "#313030",
+                        "surface": "#fcf9f8",
+                        "tertiary": "#000000",
+                        "on-tertiary-container": "#e25621",
+                        "primary-container": "#1c1b1b",
+                        "on-surface-variant": "#444748",
+                        "error": "#ba1a1a",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#ebe7e7"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1440px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Playfair Display"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Playfair Display"],
+                        "body-md": ["Inter"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "headline-xl-mobile": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "label-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["48px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-lg-mobile": ["48px", { "lineHeight": "1.1", "fontWeight": "700" }],
+                        "headline-xl-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "display-lg": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        /* Custom Utilities for high-end editorial feel */
+        .editorial-image-hover { transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1); }
+        .group:hover .editorial-image-hover { transform: scale(1.03); }
+        .text-balance { text-wrap: balance; }
+        
+        /* Hide scrollbar for horizontal scroll */
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-background text-primary antialiased min-h-screen flex flex-col">
+<!-- TopNavBar Shared Component -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-8 bg-transparent flat no shadows transition-all duration-300" id="main-nav">
+<!-- Mobile Menu Trigger -->
+<button class="md:hidden flex items-center justify-center p-2 text-primary">
+<span class="material-symbols-outlined font-[100]" style="font-variation-settings: 'wght' 100;">menu</span>
+</button>
+<!-- Navigation Links (Desktop) -->
+<nav class="hidden md:flex gap-gutter items-center">
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-on-primary transition-colors duration-300 hover:opacity-70 font-label-sm text-label-sm tracking-[0.2em] uppercase" href="#">Shop</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-on-primary transition-colors duration-300 hover:opacity-70 font-label-sm text-label-sm tracking-[0.2em] uppercase" href="#">Collections</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-on-primary transition-colors duration-300 hover:opacity-70 font-label-sm text-label-sm tracking-[0.2em] uppercase" href="#">New Arrivals</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-on-primary transition-colors duration-300 hover:opacity-70 font-label-sm text-label-sm tracking-[0.2em] uppercase" href="#">Lookbook</a>
+<a class="text-primary dark:text-on-primary border-b border-primary dark:border-on-primary pb-1 font-label-sm text-label-sm tracking-[0.2em] uppercase hover:opacity-70 transition-opacity duration-300 scale-95 transition-transform duration-200" href="#">Journal</a>
+</nav>
+<!-- Brand Logo -->
+<a class="font-headline-xl text-headline-xl tracking-tighter text-primary dark:text-on-primary md:absolute md:left-1/2 md:-translate-x-1/2" href="#">
+            CHURCH &amp; CO.
+        </a>
+<!-- Trailing Actions -->
+<div class="flex gap-4 items-center">
+<button aria-label="search" class="text-primary hover:opacity-70 transition-opacity duration-300">
+<span class="material-symbols-outlined font-[100]" style="font-variation-settings: 'wght' 100;">search</span>
+</button>
+<button aria-label="shopping_bag" class="text-primary hover:opacity-70 transition-opacity duration-300">
+<span class="material-symbols-outlined font-[100]" style="font-variation-settings: 'wght' 100;">shopping_bag</span>
+</button>
+</div>
+</header>
+<main class="flex-grow pt-32 md:pt-48 pb-20">
+<!-- Section Header -->
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-16 md:mb-24">
+<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-primary text-center md:text-left text-balance mb-4">The Journal</h1>
+<p class="font-body-md text-body-md text-secondary max-w-xl text-center md:text-left mx-auto md:mx-0">Dispatches from the intersection of heritage architecture and high-octane streetwear. Bengaluru street culture, documented.</p>
+</div>
+<!-- Featured Main Story -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-32 group cursor-pointer">
+<div class="relative w-full aspect-[4/5] md:aspect-[21/9] bg-surface-variant overflow-hidden mb-8 border border-outline-variant/30">
+<img alt="Main Story Image" class="absolute inset-0 w-full h-full object-cover editorial-image-hover" data-alt="A striking editorial fashion photograph set in a brutalist architectural environment in Bengaluru. Models are wearing minimalist, high-end streetwear with sharp silhouettes and contrasting textures. The lighting is high-contrast, casting stark shadows against raw concrete walls. The mood is confident, avant-garde, and effortlessly cool. The color palette emphasizes deep charcoal blacks, pristine whites, and architectural greys." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZB0Vvd3XHLLbeHNXQ5BnjgZPgKPHwC2v1wTYLNeBNrEOhJ2MOJQjl_CsmhA6LSSQZjMtpe0z4hI1c_pi5jsUOpQ5c_1CvT_9nlk8Z_tOiMQ3lO-jyjxn3o2pZQwGubYekd1mG-bSnsU9qvZGgPfu2VmsUQf4EKtvfshAWzIcUTtsVj_BTmV8NoMwWwglaer6gAEwBnYj6yqe7OzlQQ34XT-sDm344Y-pxy25Rn9yktIb9ntiFGHeGlFxZNyNW9gaGYSUoHc_BpVIX"/>
+<!-- Overlay for readability -->
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-60 md:opacity-0 transition-opacity duration-500"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter md:items-end">
+<div class="md:col-span-8 lg:col-span-9">
+<span class="font-label-sm text-label-sm tracking-[0.1em] text-secondary uppercase block mb-4">Editorial • Vol. IV</span>
+<h2 class="font-headline-xl-mobile text-headline-xl-mobile md:font-headline-xl md:text-headline-xl text-primary text-balance mb-4 md:mb-0 group-hover:text-tertiary-container transition-colors duration-300">Concrete &amp; Canvas: The New Wave of Bengaluru Street Style</h2>
+</div>
+<div class="md:col-span-4 lg:col-span-3 md:text-right">
+<p class="font-body-md text-body-md text-secondary mb-6 md:mb-0">A deep dive into how heritage architecture is influencing contemporary silhouettes on Church Street.</p>
+</div>
+</div>
+</section>
+<!-- Article Grid -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-32">
+<div class="flex justify-between items-end border-b border-outline-variant/50 pb-4 mb-12">
+<h3 class="font-headline-md text-headline-md text-primary">Latest Dispatches</h3>
+<a class="font-label-sm text-label-sm tracking-[0.1em] uppercase text-secondary hover:text-primary transition-colors duration-300 hidden md:inline-flex items-center gap-2" href="#">View All <span class="material-symbols-outlined text-[16px] font-[100]" style="font-variation-settings: 'wght' 100;">arrow_forward</span></a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-gutter gap-y-16">
+<!-- Article Card 1 -->
+<article class="group cursor-pointer">
+<div class="w-full aspect-square bg-surface-variant overflow-hidden mb-6 border border-outline-variant/30">
+<img alt="Article Image" class="w-full h-full object-cover editorial-image-hover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="A close-up, high-fashion shot of textured denim and silver hardware against a stark white background. The image highlights intricate stitching and premium material quality. Lighting is soft yet directional, emphasizing the texture of the fabric. The overall mood is luxurious, minimalist, and detail-oriented." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCL9Qr731Fx-Ns3SIaKZ-fQFD1Oc-4Iz7kTbcg-Dwv-otkNp2IM4phYqun5VPR1snaG02EqvcY20ffoOdpbwIy1W_dh4MFmGbWKgoV3fwf2P8tVtbPVMz3YavSKIsXGDrvY1QW-OCS1TrqkHN0nO5rWkqkJgfsINF-_nC2qtUssz93C9ka46kOl0yJkMkOt7gJ7H97ZucdraJoAMNJt67HrE1TPf6W-AnpucuduR7wt0pJIWEPOYDMdjyBsaYrekSh102jhoeEUJSri"/>
+</div>
+<div class="flex justify-between items-start mb-3">
+<span class="font-label-sm text-label-sm tracking-[0.1em] text-secondary uppercase">Materials</span>
+<span class="font-label-sm text-label-sm tracking-[0.1em] text-outline uppercase">OCT 12</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary mb-3 group-hover:text-tertiary-container transition-colors duration-300">The Weight of Denim: Exploring Japanese Selvedge</h4>
+<p class="font-body-md text-body-md text-secondary line-clamp-2">Why we source from Okayama and what it means for the longevity of your staple pieces.</p>
+</article>
+<!-- Article Card 2 (Offset slightly on desktop) -->
+<article class="group cursor-pointer md:mt-12">
+<div class="w-full aspect-[4/5] bg-surface-variant overflow-hidden mb-6 border border-outline-variant/30">
+<img alt="Article Image" class="w-full h-full object-cover editorial-image-hover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="A moody, atmospheric shot of an underground music venue in Bengaluru. Shadows obscure faces, while sharp beams of stage light cut through the haze. The aesthetic is raw, energetic, and industrial. The color palette focuses on deep blacks and subtle, washed-out tones of the ambient lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLd-z5qmZEn3egPICGWCIEFG6848drRePfb7KVxjoqXu7z3AwMGsVl3cej-CeedaXHQXHs3x4cfw2QbYxXOnLRjBkFpeHdFjel9huY3LF6H8xiKQMDAJQ0yBARx-mvTOQ-Y9c00s4yYapa9mGj6OmsLet9HUcrIecGey-wmXlKkBlxg6dxcQfv0eLb_ooW1hkUaVFe8fFRuSku8BPdQTPM0F-kkphbgEDyVIc9opWTy6nGwjRgRZ5Gml0uKm0pkZBTyZMiOmw-Lb1z"/>
+</div>
+<div class="flex justify-between items-start mb-3">
+<span class="font-label-sm text-label-sm tracking-[0.1em] text-secondary uppercase">Soundscape</span>
+<span class="font-label-sm text-label-sm tracking-[0.1em] text-outline uppercase">OCT 05</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary mb-3 group-hover:text-tertiary-container transition-colors duration-300">Resonance: The Electronic Underground of BLR</h4>
+<p class="font-body-md text-body-md text-secondary line-clamp-2">Curating the sounds that define the late-night culture of the city.</p>
+</article>
+<!-- Article Card 3 -->
+<article class="group cursor-pointer">
+<div class="w-full aspect-square bg-surface-variant overflow-hidden mb-6 border border-outline-variant/30">
+<img alt="Article Image" class="w-full h-full object-cover editorial-image-hover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="An abstract architectural composition focusing on sharp angles and minimalist lines. The image captures a modern building facade against a clear, bright sky. The aesthetic is clean, geometric, and precise. The palette is dominated by stark whites, soft concrete greys, and deep shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBT77ZTl_WIEPVopAh-X9jXLplnR6YqgO-uZyMaNaSm_vV4FGjL4bJ-0k78yP7siSoNBEO1gU_xb_3xZHhdyLuEUKPvO5JdorG2yeZK3cXPsoGOQzuSS0mx_DWuaAiQFL_Dr_Z-GyIwJC9WGFL7J4ipwWaTySZ0grl6t2A7YmKhKf6G3Zdb8mNbujdwUCVTQEyKTaw9FFGR9I5nvcHkLJEamG_50mfjAQ2qypUIw8YF0Y43b-zErQGnstfgLPVVZrNyAn7oMX4Y9eBU"/>
+</div>
+<div class="flex justify-between items-start mb-3">
+<span class="font-label-sm text-label-sm tracking-[0.1em] text-secondary uppercase">Architecture</span>
+<span class="font-label-sm text-label-sm tracking-[0.1em] text-outline uppercase">SEP 28</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary mb-3 group-hover:text-tertiary-container transition-colors duration-300">Lines &amp; Angles: Brutalism in the Tropics</h4>
+<p class="font-body-md text-body-md text-secondary line-clamp-2">How exposed concrete structures shape the visual identity of our collections.</p>
+</article>
+</div>
+</section>
+<!-- Full Bleed Parallel Culture Section -->
+<section class="mb-32">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-12">
+<div class="flex items-center gap-4">
+<div class="h-[1px] w-12 bg-primary"></div>
+<h3 class="font-headline-xl-mobile text-headline-xl-mobile md:font-headline-xl md:text-headline-xl text-primary">Parallel Culture</h3>
+</div>
+<p class="font-body-lg text-body-lg text-secondary mt-4 max-w-2xl">Highlighting the creatives, spaces, and objects that align with the CHURCH &amp; CO. ethos.</p>
+</div>
+<!-- Horizontal Scroll Container ignoring standard margins -->
+<div class="w-full overflow-x-auto hide-scrollbar pl-margin-mobile md:pl-margin-desktop pb-8">
+<div class="flex gap-gutter w-max pr-margin-mobile md:pr-margin-desktop">
+<!-- Culture Card 1 -->
+<div class="w-[300px] md:w-[400px] flex-shrink-0 group cursor-pointer">
+<div class="w-full aspect-[3/4] bg-surface-variant overflow-hidden mb-6 border border-outline-variant/50 relative">
+<img alt="Cafe" class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700" data-alt="A minimalist, brutalist coffee shop interior. The space features raw concrete walls, sleek stainless steel counters, and sharp, geometric furniture. A single barista works behind the counter. The lighting is diffused and cool. The aesthetic is clean, industrial, and highly curated, focusing on monochromatic tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCM-L9Gqwm6yNnWbk1-48t4qfOVUGfW20KegRt-E6CuaO_dsxm3KJ7XAG2xT8Idfm-DRNIit4sGBX2D05Qvq-VH4OFKFjzQY0pJXMPSOEhyXE0EgzGxh4Z5LghFMEFqyF3kWqilkRafOS6EKjuUsR0Xw1BmbKrlS4bZYr-J1VQ_peprwGOrocnL-YThRy-YChutsxI5pyzEmUMFemlBYPSg4CKK29lbaW4UY1reiGRmt49N_-WHYc0RRfMs-Sz22HhRiQqs4_JI-QIU"/>
+<div class="absolute bottom-4 left-4 right-4 p-4 bg-background/90 backdrop-blur-sm border border-outline-variant/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<span class="font-label-sm text-label-sm tracking-[0.1em] text-primary uppercase block mb-1">Space</span>
+<span class="font-headline-md text-headline-md text-primary">Third Wave Minimal</span>
+</div>
+</div>
+</div>
+<!-- Culture Card 2 -->
+<div class="w-[300px] md:w-[400px] flex-shrink-0 group cursor-pointer">
+<div class="w-full aspect-[3/4] bg-surface-variant overflow-hidden mb-6 border border-outline-variant/50 relative">
+<img alt="Art" class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700" data-alt="A modern art gallery space featuring large-scale, monochromatic abstract canvas works. The space is stark white with high ceilings and polished concrete floors. A single viewer stands contemplating the art. The lighting is gallery-standard, bright and even. The mood is quiet, contemplative, and sophisticated." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKDqihPekm0y0JA1ClVZEaVMUMeqcl5ec2__NtROlSDuPY5B_cXBqQKcl5K12Q7G6sfE9ea7HYXZFEnaGqNonnwRg8Hz6J5Vo3kfNBXldy0M0-dVsP8gBxceeWGgzExBhLOGcmI_FD_HMedYVFLrlSOSb_FZFnxiH5xTZva9071QYHBK2fWXtOCsPwpTEKEQ4gtev-ME5SzgFydasiZ3xdKgf9wq5_QK7hvDHVB2mEkdj5NHIDvKv4Jo0rXm8pVgr5yOeGApW_c-i5"/>
+<div class="absolute bottom-4 left-4 right-4 p-4 bg-background/90 backdrop-blur-sm border border-outline-variant/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<span class="font-label-sm text-label-sm tracking-[0.1em] text-primary uppercase block mb-1">Artist Profile</span>
+<span class="font-headline-md text-headline-md text-primary">Studio K</span>
+</div>
+</div>
+</div>
+<!-- Culture Card 3 -->
+<div class="w-[300px] md:w-[400px] flex-shrink-0 group cursor-pointer">
+<div class="w-full aspect-[3/4] bg-surface-variant overflow-hidden mb-6 border border-outline-variant/50 relative">
+<img alt="Object" class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700" data-alt="A close-up studio shot of a beautifully designed, minimalist object—perhaps a sleek piece of modern furniture or high-end electronics. It sits isolated against a pure white backdrop. The focus is on the materials and the sharp, clean lines of the design. The aesthetic is industrial design perfection, utilizing black, white, and silver." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKbTiWocjifnaOqJj8YqHvtm7Lz5108pnjV9mophHWgfwAFrOXOqIt20jvvkYKp0h_hnNSMICzsbDqPksSpqLIy9DAoC6cf1tkBg8wQz1O7sOyVv1A8L2RDLoJUsP3zfGNco1-YsSjnoMnbu_Hh0iRyRawjC0jDvK2BN3rJLH0hxaLVWeHymMbXIwKtvbZ7IIzb2hHb7nVS1AzHDzBDpVyMOQUquz-EfIyEgZ5dGkjTf3AW_9XZsZu4aCuAXZGVRZbqbyJ_rBSf03G"/>
+<div class="absolute bottom-4 left-4 right-4 p-4 bg-background/90 backdrop-blur-sm border border-outline-variant/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<span class="font-label-sm text-label-sm tracking-[0.1em] text-primary uppercase block mb-1">Object</span>
+<span class="font-headline-md text-headline-md text-primary">Industrial Form</span>
+</div>
+</div>
+</div>
+<!-- Culture Card 4 (Ghost card to ensure padding at end) -->
+<div class="w-[20px] md:w-[64px] flex-shrink-0"></div>
+</div>
+</div>
+</section>
+<!-- Newsletter / Subscribe -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="border border-outline-variant p-8 md:p-16 flex flex-col md:flex-row gap-8 items-center justify-between bg-surface-container-low">
+<div class="max-w-md text-center md:text-left">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Subscribe to Dispatches</h3>
+<p class="font-body-md text-body-md text-secondary">Join the list for early access to drops, exclusive editorials, and cultural highlights.</p>
+</div>
+<form class="w-full max-w-md flex gap-4">
+<div class="flex-grow">
+<label class="sr-only" for="email-subscribe">Email address</label>
+<input class="w-full bg-transparent border-0 border-b border-primary focus:ring-0 focus:border-tertiary-container font-label-sm text-label-sm tracking-[0.1em] text-primary placeholder:text-secondary-fixed-dim px-0 py-3 transition-colors duration-300" id="email-subscribe" placeholder="YOUR EMAIL ADDRESS" type="email"/>
+</div>
+<button class="bg-primary text-on-primary font-label-sm text-label-sm tracking-[0.1em] uppercase px-8 py-3 rounded hover:bg-tertiary-container transition-colors duration-300 flex-shrink-0" type="submit">
+                        Join
+                    </button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer Shared Component -->
+<footer class="w-full px-margin-desktop py-20 flex flex-col md:flex-row justify-between items-start gap-gutter bg-primary dark:bg-surface-container-lowest border-t border-outline dark:border-outline-variant flat no shadows transition-colors duration-300" id="main-footer">
+<!-- Brand & Copyright -->
+<div class="flex flex-col gap-8 md:gap-16">
+<a class="font-headline-xl text-headline-xl text-on-primary dark:text-primary" href="#">
+                CHURCH &amp; CO.
+            </a>
+<p class="font-label-sm text-label-sm tracking-[0.1em] uppercase text-secondary-fixed-dim dark:text-secondary">
+                © 2024 CHURCH &amp; CO. BENGALURU. ALL RIGHTS RESERVED.
+            </p>
+</div>
+<!-- Links Grid -->
+<div class="grid grid-cols-2 md:grid-cols-3 gap-x-12 gap-y-6 mt-12 md:mt-0">
+<a class="text-secondary-fixed-dim dark:text-secondary hover:text-tertiary-fixed-dim transition-colors duration-300 focus:ring-1 focus:ring-tertiary-fixed font-label-sm text-label-sm tracking-[0.1em] uppercase" href="#">Church St, Bengaluru</a>
+<a class="text-secondary-fixed-dim dark:text-secondary hover:text-tertiary-fixed-dim transition-colors duration-300 focus:ring-1 focus:ring-tertiary-fixed font-label-sm text-label-sm tracking-[0.1em] uppercase" href="#">Instagram</a>
+<a class="text-secondary-fixed-dim dark:text-secondary hover:text-tertiary-fixed-dim transition-colors duration-300 focus:ring-1 focus:ring-tertiary-fixed font-label-sm text-label-sm tracking-[0.1em] uppercase" href="#">TikTok</a>
+<a class="text-secondary-fixed-dim dark:text-secondary hover:text-tertiary-fixed-dim transition-colors duration-300 focus:ring-1 focus:ring-tertiary-fixed font-label-sm text-label-sm tracking-[0.1em] uppercase" href="#">Newsletter</a>
+<a class="text-secondary-fixed-dim dark:text-secondary hover:text-tertiary-fixed-dim transition-colors duration-300 focus:ring-1 focus:ring-tertiary-fixed font-label-sm text-label-sm tracking-[0.1em] uppercase" href="#">Privacy</a>
+</div>
+</footer>
+<script>
+        // Simple script to handle header background on scroll for better readability
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('main-nav');
+            if (window.scrollY > 50) {
+                header.classList.add('bg-background/90', 'backdrop-blur-md');
+                header.classList.remove('bg-transparent');
+            } else {
+                header.classList.remove('bg-background/90', 'backdrop-blur-md');
+                header.classList.add('bg-transparent');
+            }
+        });
+    </script>
+</body></html>

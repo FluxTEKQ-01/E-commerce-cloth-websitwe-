@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+:root {
+  --charcoal-black: #0d0d0d;
+  --soft-black: #121212;
+  --off-white: #f7f5f2;
+  --warm-beige: #d8cbb8;
+  --concrete-gray: #7a7a7a;
+  --electric-orange: #ff6b35;
+  --background: var(--charcoal-black);
+  --foreground: var(--off-white);
+  --card: var(--soft-black);
+  --card-foreground: var(--off-white);
+  --primary: var(--off-white);
+  --primary-foreground: var(--charcoal-black);
+  --secondary: var(--warm-beige);
+  --secondary-foreground: var(--charcoal-black);
+  --accent: var(--electric-orange);
+  --accent-foreground: var(--charcoal-black);
+  --muted: #1e1e1e;
+  --muted-foreground: #a8a29a;
+  --border: rgba(247, 245, 242, 0.14);
+  --ring: var(--electric-orange);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --font-sans: var(--font-church-sans);
+  --font-display: var(--font-church-display);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-church-sans), sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  scroll-padding-top: 5rem;
+}
+
+body::selection {
+  background: var(--accent);
+  color: var(--accent-foreground);
+}
+
+a,
+button,
+input,
+textarea {
+  outline-color: var(--ring);
+}
+
+.church-canvas {
+  background:
+    radial-gradient(circle at 18% 12%, rgba(255, 107, 53, 0.12), transparent 28rem),
+    linear-gradient(135deg, rgba(216, 203, 184, 0.08) 0 1px, transparent 1px 100%),
+    var(--background);
+  background-size: auto, 48px 48px, auto;
+}
+
+.container-shell {
+  width: min(100% - 2rem, 1440px);
+  margin-inline: auto;
+}
+
+.display-title {
+  font-family: var(--font-church-display), serif;
+  letter-spacing: -0.045em;
+  line-height: 0.9;
+}
+
+.section-title {
+  font-family: var(--font-church-display), serif;
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+}
+
+.micro-label {
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.editorial-card {
+  border: 1px solid var(--border);
+  background: linear-gradient(145deg, rgba(247, 245, 242, 0.07), rgba(18, 18, 18, 0.94));
+}
+
+.beige-panel {
+  background: var(--secondary);
+  color: var(--secondary-foreground);
+}
+
+.focus-ring {
+  outline: 2px solid transparent;
+  outline-offset: 3px;
+}
+
+.focus-ring:focus-visible {
+  outline-color: var(--ring);
+}
+
+.render-later {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 900px;
+}

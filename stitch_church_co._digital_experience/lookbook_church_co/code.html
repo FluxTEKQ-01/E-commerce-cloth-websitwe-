@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CHURCH &amp; CO. | Lookbook</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom Parallax Utility Classes */
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        /* Hide scrollbar for clean editorial look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #fcf9f8; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1c1b1b; 
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-fixed": "#ffdbd0",
+                      "on-primary": "#ffffff",
+                      "background": "#fcf9f8",
+                      "on-primary-fixed": "#1c1b1b",
+                      "secondary-fixed": "#e3e2e2",
+                      "secondary-fixed-dim": "#c7c6c6",
+                      "on-primary-fixed-variant": "#474646",
+                      "surface-container": "#f0edec",
+                      "inverse-primary": "#c9c6c5",
+                      "on-primary-container": "#858383",
+                      "primary": "#000000",
+                      "on-error-container": "#93000a",
+                      "surface-tint": "#5f5e5e",
+                      "surface-container-low": "#f6f3f2",
+                      "outline-variant": "#c4c7c7",
+                      "secondary": "#5e5e5e",
+                      "surface-bright": "#fcf9f8",
+                      "surface-container-highest": "#e5e2e1",
+                      "surface-dim": "#dcd9d9",
+                      "tertiary-container": "#390c00",
+                      "on-secondary": "#ffffff",
+                      "surface-variant": "#e5e2e1",
+                      "on-background": "#1c1b1b",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary-fixed": "#390c00",
+                      "on-tertiary-fixed-variant": "#832600",
+                      "on-error": "#ffffff",
+                      "on-surface": "#1c1b1b",
+                      "on-secondary-container": "#646464",
+                      "inverse-on-surface": "#f3f0ef",
+                      "on-secondary-fixed": "#1b1c1c",
+                      "primary-fixed": "#e5e2e1",
+                      "on-secondary-fixed-variant": "#464747",
+                      "on-tertiary": "#ffffff",
+                      "secondary-container": "#e3e2e2",
+                      "primary-fixed-dim": "#c9c6c5",
+                      "outline": "#747878",
+                      "tertiary-fixed-dim": "#ffb59d",
+                      "inverse-surface": "#313030",
+                      "surface": "#fcf9f8",
+                      "tertiary": "#000000",
+                      "on-tertiary-container": "#e25621",
+                      "primary-container": "#1c1b1b",
+                      "on-surface-variant": "#444748",
+                      "error": "#ba1a1a",
+                      "error-container": "#ffdad6",
+                      "surface-container-high": "#ebe7e7"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "container-max": "1440px",
+                      "margin-desktop": "64px",
+                      "margin-mobile": "20px",
+                      "gutter": "24px",
+                      "unit": "8px"
+              },
+              "fontFamily": {
+                      "headline-xl": [
+                              "Playfair Display"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Playfair Display"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "display-lg-mobile": [
+                              "Playfair Display"
+                      ],
+                      "headline-xl-mobile": [
+                              "Playfair Display"
+                      ],
+                      "display-lg": [
+                              "Playfair Display"
+                      ],
+                      "label-sm": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "headline-xl": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-xl-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg": [
+                              "72px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background antialiased selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar Shared Component -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-8 bg-transparent transition-all duration-300" id="global-nav">
+<!-- Desktop Nav Links (Hidden on Mobile, Left Side) -->
+<div class="hidden md:flex gap-8 items-center w-1/3">
+<a class="font-label-sm text-label-sm tracking-[0.2em] uppercase text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-on-primary transition-colors duration-300" href="#">Shop</a>
+<a class="font-label-sm text-label-sm tracking-[0.2em] uppercase text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-on-primary transition-colors duration-300" href="#">Collections</a>
+<a class="font-label-sm text-label-sm tracking-[0.2em] uppercase text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-on-primary transition-colors duration-300" href="#">New Arrivals</a>
+</div>
+<!-- Brand Logo (Center) -->
+<div class="flex-1 md:w-1/3 flex justify-start md:justify-center">
+<a class="font-headline-xl-mobile text-headline-xl-mobile md:font-headline-xl md:text-headline-xl tracking-tighter text-primary dark:text-on-primary hover:opacity-70 transition-opacity duration-300" href="#">CHURCH &amp; CO.</a>
+</div>
+<!-- Right Side Nav & Icons -->
+<div class="flex items-center justify-end gap-6 md:gap-8 w-auto md:w-1/3">
+<div class="hidden md:flex gap-8 items-center">
+<!-- ACTIVE NAV ITEM: Lookbook -->
+<a class="font-label-sm text-label-sm tracking-[0.2em] uppercase text-primary dark:text-on-primary border-b border-primary dark:border-on-primary pb-1 scale-95 transition-transform duration-200" href="#">Lookbook</a>
+<a class="font-label-sm text-label-sm tracking-[0.2em] uppercase text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-on-primary transition-colors duration-300" href="#">Journal</a>
+</div>
+<button aria-label="search" class="hover:opacity-70 transition-opacity duration-300 text-primary dark:text-on-primary">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button aria-label="shopping_bag" class="hover:opacity-70 transition-opacity duration-300 text-primary dark:text-on-primary">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+</nav>
+<main>
+<!-- Hero Section / Cover -->
+<section class="relative w-full h-[921px] md:h-screen flex items-center justify-center overflow-hidden bg-surface-variant">
+<!-- Parallax Background Image -->
+<div class="absolute inset-0 w-full h-[120%] -top-[10%] bg-cover bg-center js-parallax z-0" data-alt="A high-contrast, black and white editorial photograph of a model walking down Church Street in Bengaluru. The model is wearing avant-garde streetwear featuring sharp, architectural silhouettes and layered textures. The background shows blurred, bustling street activity and heritage architecture, rendered in deep shadows and bright highlights to emphasize a luxury minimalist aesthetic." data-speed="0.2" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBC-1ErXLAZocAt1WhNtDgEoIgGHi4nMZHr-PeUvZddjlbCTEHvKN1XTvx4STaxUzqWAoPLWa_HzFuQOCTbGLw6X9D2CIZeKNNRdRhYCq8PYgzKkEtzORHapbKYIg3n8rJDzhdQ_22wXeBtTrUrueX1DnsYGND4sJfWb3m4ileNPji5h543tb_nmRXLQmOc1gQ8vACG2erBeIuHv-L-R2OAKWrpyB3Nbo2_MayRuYgzgvKmKpyZejEB2TbWPWjMzPFiblTr57glp1JF');">
+</div>
+<!-- Overlay for contrast -->
+<div class="absolute inset-0 bg-background/20 z-10"></div>
+<div class="relative z-20 text-center px-margin-mobile flex flex-col items-center">
+<span class="font-label-sm text-label-sm tracking-[0.2em] uppercase text-on-surface mb-6 inline-block bg-background/80 px-4 py-2 backdrop-blur-sm border border-outline-variant">Volume 01</span>
+<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-primary text-center max-w-4xl mx-auto mix-blend-color-burn">
+                    STREET<br/>ECHOES
+                </h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-8 max-w-md mx-auto bg-background/80 px-6 py-4 backdrop-blur-sm border border-outline-variant">
+                    Capturing the raw architectural energy and avant-garde spirit of Bengaluru's urban core.
+                </p>
+<div class="mt-12 animate-bounce opacity-50">
+<span class="material-symbols-outlined">arrow_downward</span>
+</div>
+</div>
+</section>
+<!-- Masonry Grid Canvas - Look 01 -->
+<section class="w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-32 md:py-48">
+<div class="grid grid-cols-4 md:grid-cols-12 gap-gutter items-center">
+<!-- Large Image (Offset Left) -->
+<div class="col-span-4 md:col-span-6 md:col-start-1 relative js-parallax-element group" data-speed="0.05">
+<div class="overflow-hidden bg-surface-container aspect-[3/4]">
+<img alt="Look 01" class="w-full h-full object-cover grayscale contrast-125 transition-transform duration-[1.5s] group-hover:scale-105" data-alt="A striking editorial fashion portrait shot in a sunlit alleyway in Bengaluru. The subject is wearing an oversized, structured blazer in stark black over a crisp white minimal shirt. Hard sunlight creates dramatic, geometric shadows against a textured concrete wall. The image features a muted, high-contrast color palette focusing on deep blacks, bright off-whites, and subtle warm beige tones, embodying high-end street culture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1jbDoGk9DwcDqwK5VZ90jTlW73R5EKyVxKEmMCpppWwBGEjwKTLZSv3m4_EsOUbJmH7cHnNXr13j2L-0e3kIpWO0LOgt3IIUqUU70pqFloiu14QSIv0DaxRG_WTFfJO6hxPMV2VIn3kWQFD8N27jJKNiv6s-7bdvFCp4WLlIjoeQjsbBS0xgpgM0nV5WXAS9Wxe3kgFP8TTApSp8XZ922FZkw4zfNMIkGuqpS4nzBxvkPaCsiKe074KdKsguv85VWGdNSJWRkYqOy"/>
+</div>
+<div class="absolute bottom-4 left-4 bg-background border border-outline-variant p-4 z-10 hidden md:block opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+<span class="font-label-sm text-label-sm tracking-[0.2em] uppercase text-primary block mb-2">Look 01</span>
+<a class="font-body-sm text-body-sm underline decoration-1 underline-offset-4 hover:text-secondary transition-colors" href="#">Shop the Coat</a>
+</div>
+</div>
+<!-- Text Block & Small Image (Offset Right) -->
+<div class="col-span-4 md:col-span-4 md:col-start-8 mt-16 md:mt-0 flex flex-col gap-16 relative z-10">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary mb-6">Structural Integrity</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                            We dismantle traditional tailoring and rebuild it for the concrete grid. Oversized proportions meet rigid, architectural lines. It's a study in harsh contrasts—stark whites against impenetrable blacks.
+                        </p>
+<button class="bg-primary text-on-primary font-label-sm text-label-sm tracking-[0.1em] uppercase px-8 py-4 rounded hover:bg-secondary transition-colors duration-300">
+                            Explore Collection
+                        </button>
+</div>
+<div class="aspect-square bg-surface-container overflow-hidden w-3/4 self-end js-parallax-element shadow-[4px_4px_0px_0px_#121212]" data-speed="-0.03">
+<img alt="Detail Shot" class="w-full h-full object-cover sepia-[.3] contrast-150" data-alt="A close-up fashion photography shot focusing on the intricate details of a dark denim jacket and a crisp white t-shirt collar. The texture of the heavy fabric is highlighted by sharp, directional lighting. The background is a soft, out-of-focus warm beige, drawing all attention to the minimalist, architectural construction of the garments. The overall mood is sophisticated, raw, and high-octane." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAalbPQylBOKmtGaSAgl-k3M5ktTwmY6wVLAmktUsJd4-KN1istrJVmJjYvMg4JCtzVGzYsKE9Wkw1IMghl166RVnwONnMrlyjaQ30jrl0OM8H6AvaAarZ6c9_jZQiTHrYFotxWhEXYNxufFqnBwSrjqgyXw6A7l1-KbIDz8Li-Oreik4qM9F8pmHGPo74Gnz4Ue-6G4jaE5k0TIzkiv1SAK1wOCkjz82GjzAyJKufukYx5a5hCvz4geYGFZRfOFdVbEsWr-8SmLpk6"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Full Bleed Editorial Section -->
+<section class="w-full relative h-[716px] md:h-[921px] overflow-hidden my-16 md:my-32 flex items-center">
+<div class="absolute inset-0 w-full h-[120%] -top-[10%] bg-cover bg-center js-parallax z-0 grayscale opacity-80" data-alt="A cinematic, wide-angle fashion photograph capturing a group of three models standing confidently on a vintage rooftop overlooking Bengaluru. They are dressed in cohesive, minimalist luxury streetwear in shades of charcoal, off-white, and muted concrete gray. The sky above is a pale, washed-out tone, adding expansive whitespace to the composition. The aesthetic is highly polished, editorial, and heavily relies on architectural framing." data-speed="0.15" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDgW2QOwwzWeVOAlCAE4YCbxoDkWIhjqrT3a6gHCfHkUa5fGBi52gDc6RCARUIBzbBhNhD7cLqaKxcPX7QFgJr166AE9NFbBzMNI5tfeXGOw9NOmVnInDr4g1EIZtdyBwaYGJDkzlouYXPfE2IQDQ9ObZo0n9fjAUwAns8PWn7rGbrfi5Zwg3fzN2aQV26VwUmEq-EPbTsa_xdlNWj6jlnvbdMsEU-i3i_18zxXxY08_TrgehlYSylv9dh63t6wLUHazeFZ4fT_rH8S');">
+</div>
+<div class="relative z-10 w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col items-end text-right">
+<div class="bg-background/90 backdrop-blur-md p-8 md:p-12 border border-outline-variant max-w-xl js-parallax-element" data-speed="0.05">
+<span class="font-label-sm text-label-sm tracking-[0.2em] uppercase text-secondary mb-4 block">The "Drop" Series</span>
+<h2 class="font-headline-xl-mobile text-headline-xl-mobile md:font-headline-xl md:text-headline-xl text-primary mb-6">MONOLITH OVERCOAT</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                        Limited to 50 pieces worldwide. Engineered from heavyweight Melton wool, cut with razor precision to drape flawlessly over any silhouette.
+                    </p>
+<button class="border border-primary text-primary hover:bg-primary hover:text-on-primary font-label-sm text-label-sm tracking-[0.1em] uppercase px-8 py-4 rounded transition-all duration-300">
+                        View Editorial
+                    </button>
+</div>
+</div>
+</section>
+<!-- Product Focus Grid -->
+<section class="w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-32 border-t border-outline-variant">
+<div class="flex justify-between items-end mb-16">
+<h3 class="font-headline-md text-headline-md text-primary">Selected Pieces</h3>
+<a class="font-label-sm text-label-sm tracking-[0.1em] uppercase text-secondary hover:text-primary transition-colors border-b border-transparent hover:border-primary pb-1" href="#">View All</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-x-gutter gap-y-16">
+<!-- Product 1 -->
+<a class="group block cursor-pointer" href="#">
+<div class="aspect-[3/4] bg-surface-container overflow-hidden mb-6 rounded-none">
+<img alt="Product 1" class="w-full h-full object-cover grayscale group-hover:scale-105 transition-transform duration-700" data-alt="A minimalist flat-lay style studio shot of a structured, charcoal black men's blazer resting on a pristine, off-white seamless background. The lighting is soft and diffused, highlighting the subtle texture of the high-quality wool fabric and the sharp, architectural lines of the lapels. The mood is clinical, premium, and purely focused on the garment's construction." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA08pkKPxkob0x5bPlI5_6GpAJo4FUP2cKMURiaq8LI_fJnDNlcXTDAX0LkWNPG9bYdB0HKyKGdKG6E--LfGhHNaMPaL16kEAB0HRYTt9JKuL57ikTDyGM6Dyki7R5Q4WNCc0whChjkEZ9I9XyICyNNsWN0QzJoYMFMkqsN1w0o6lVlK5XYHndwwMIPDw3TAVUAt0IvFvkRBNuljapk7L2RLdEg4St51JVnJAKk6sHlDVn0OJuxCxLJNltb5D6ekMt24WWIrF6mTNx7"/>
+</div>
+<div class="flex justify-between items-start">
+<span class="font-label-sm text-label-sm text-primary uppercase block w-2/3">The Architect Blazer</span>
+<span class="font-headline-sm text-primary">₹14,500</span>
+</div>
+</a>
+<!-- Product 2 -->
+<a class="group block cursor-pointer mt-0 md:mt-12" href="#">
+<div class="aspect-[3/4] bg-surface-container overflow-hidden mb-6 rounded-none">
+<img alt="Product 2" class="w-full h-full object-cover grayscale group-hover:scale-105 transition-transform duration-700" data-alt="A clean, minimalist product shot of a crisp, stark white oversized t-shirt hanging on a simple black metal wire hanger against a warm beige background. The fabric drapes heavily, implying premium weight and quality. The composition is dead-center, emphasizing symmetry and the luxury minimalist aesthetic. High-contrast lighting outlines the silhouette sharply." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQGaZ5Q6lg1ZwFtFDLIBPuIgptNV5EPEfKupC6vubzl_u8ZrWJZx1FNjAnjMgIOcA_luiWdwfjvm032LDaMOcU4vmObhOFQcay05EzjH2ob4CBQvxmvDI-jzHM2SPxbhVxc_aKQcsYqAk3gl6A5KH7GS_gLpHG4MC0d614FUnTRbZnUiRsb3Z9HryJtAZVgbW26f1nhQCuZZotbR8_0mn7UfHkt2Irj0BElhG6ue7zl0hUnH-d2xOTVkPFSfTr2Z7m_P_NgtkCR8ew"/>
+</div>
+<div class="flex justify-between items-start">
+<span class="font-label-sm text-label-sm text-primary uppercase block w-2/3">Heavyweight Box Tee</span>
+<span class="font-headline-sm text-primary">₹4,200</span>
+</div>
+</a>
+<!-- Product 3 -->
+<a class="group block cursor-pointer" href="#">
+<div class="aspect-[3/4] bg-surface-container overflow-hidden mb-6 rounded-none">
+<img alt="Product 3" class="w-full h-full object-cover grayscale group-hover:scale-105 transition-transform duration-700" data-alt="A detailed product photograph of a pair of wide-leg, raw denim jeans in a deep charcoal wash. The jeans are styled folded meticulously on a rough concrete floor, creating a brutalist, textural contrast between the premium fabric and the harsh surface. The image uses a tight crop and directional lighting to emphasize the heavy twill weave and silver hardware." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAE3kbxOdPDw1vyXZ5qLxetIMjT-6nxfe5k9tusTRTEm8-0azdhXnC5WjI0T9k5fL20xJvm7vGhFjwBTLgViWCdIF8lRwN0cKsaveJeIZ8gMBHTRnAUziTRgN2j3XZ-6fgFrMcok1FLYD3bce_6Nqf1O2untT48EgC0EPd9y7b72Kalo-fGx_H9wAvLTFu-xrPgopC8zKp-14wVuTqU6Vg3moBcnViwPbk-9oSbrYbbnr72gs9xWVhrmwzXHqBPCHLh8qRQU9TWzK7g"/>
+</div>
+<div class="flex justify-between items-start">
+<span class="font-label-sm text-label-sm text-primary uppercase block w-2/3">Concrete Denim</span>
+<span class="font-headline-sm text-primary">₹9,800</span>
+</div>
+</a>
+<!-- Product 4 -->
+<a class="group block cursor-pointer mt-0 md:mt-12" href="#">
+<div class="aspect-[3/4] bg-surface-container overflow-hidden mb-6 rounded-none">
+<img alt="Product 4" class="w-full h-full object-cover grayscale group-hover:scale-105 transition-transform duration-700" data-alt="A luxury fashion still-life featuring a pair of chunky, minimalist black leather boots resting on an angled off-white plinth. The background is a solid, dark, soft black. A single, hard spotlight hits the shoes, creating a long, geometric shadow that cuts across the plinth. The focus is on the smooth texture of the leather and the brutalist sole design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4iVlvSyQyg1fT0_Uey3pDk26Z9p3GwI4LV9nVEXGF6dRHs2pfuDU8CogyDAZjWWajySqqJNDDdcVW80Qe0qaLSTVNsSKEbmBF5oTtzj_xg9FtjKm5gXlaV6jbB9kgX6jAPihVwrhqQUi_bMGj9bxYoBKwsw3DE5ImvsapzOWFkrK67p4g8yQbs6wYc3mGlTKOt217D5He_GxXod8Wv7iLV58XaxkmpcgGfQxAbh4LNmv3Zj7HDxHBv4-ozli9FSs7IuUBlHwQ1sCq"/>
+</div>
+<div class="flex justify-between items-start">
+<span class="font-label-sm text-label-sm text-primary uppercase block w-2/3">Utility Boot V2</span>
+<span class="font-headline-sm text-primary">₹18,000</span>
+</div>
+</a>
+</div>
+</section>
+</main>
+<!-- Footer Shared Component -->
+<footer class="w-full px-margin-mobile md:px-margin-desktop py-12 md:py-20 flex flex-col md:flex-row justify-between items-start gap-gutter bg-primary dark:bg-surface-container-lowest border-t border-outline dark:border-outline-variant text-on-primary dark:text-primary">
+<!-- Brand & Copyright -->
+<div class="flex flex-col gap-8 w-full md:w-1/2">
+<span class="font-headline-xl text-headline-xl text-on-primary dark:text-primary tracking-tighter">CHURCH &amp; CO.</span>
+<p class="font-label-sm text-label-sm tracking-[0.1em] uppercase text-secondary-fixed-dim dark:text-secondary mt-auto">
+                © 2024 CHURCH &amp; CO. BENGALURU. ALL RIGHTS RESERVED.
+            </p>
+</div>
+<!-- Links Grid -->
+<div class="flex flex-col sm:flex-row gap-12 md:gap-24 w-full md:w-auto mt-12 md:mt-0">
+<div class="flex flex-col gap-4">
+<span class="font-label-sm text-label-sm tracking-[0.1em] uppercase text-on-primary dark:text-primary font-bold mb-4">Location</span>
+<a class="font-label-sm text-label-sm tracking-[0.1em] uppercase text-secondary-fixed-dim dark:text-secondary hover:text-tertiary-fixed-dim transition-colors duration-300 focus:ring-1 focus:ring-tertiary-fixed outline-none" href="#">Church St, Bengaluru</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-sm text-label-sm tracking-[0.1em] uppercase text-on-primary dark:text-primary font-bold mb-4">Social</span>
+<a class="font-label-sm text-label-sm tracking-[0.1em] uppercase text-secondary-fixed-dim dark:text-secondary hover:text-tertiary-fixed-dim transition-colors duration-300 focus:ring-1 focus:ring-tertiary-fixed outline-none" href="#">Instagram</a>
+<a class="font-label-sm text-label-sm tracking-[0.1em] uppercase text-secondary-fixed-dim dark:text-secondary hover:text-tertiary-fixed-dim transition-colors duration-300 focus:ring-1 focus:ring-tertiary-fixed outline-none" href="#">TikTok</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-sm text-label-sm tracking-[0.1em] uppercase text-on-primary dark:text-primary font-bold mb-4">Connect</span>
+<a class="font-label-sm text-label-sm tracking-[0.1em] uppercase text-secondary-fixed-dim dark:text-secondary hover:text-tertiary-fixed-dim transition-colors duration-300 focus:ring-1 focus:ring-tertiary-fixed outline-none" href="#">Newsletter</a>
+<a class="font-label-sm text-label-sm tracking-[0.1em] uppercase text-secondary-fixed-dim dark:text-secondary hover:text-tertiary-fixed-dim transition-colors duration-300 focus:ring-1 focus:ring-tertiary-fixed outline-none" href="#">Privacy</a>
+</div>
+</div>
+</footer>
+<!-- Interactive Scripts -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Background Parallax
+            const bgElements = document.querySelectorAll('.js-parallax');
+            // Element Parallax (Translations)
+            const elElements = document.querySelectorAll('.js-parallax-element');
+            
+            // Navbar Scroll Effect
+            const nav = document.getElementById('global-nav');
+
+            window.addEventListener('scroll', () => {
+                const scrolled = window.scrollY;
+
+                // Navbar background change on scroll
+                if (scrolled > 50) {
+                    nav.classList.replace('bg-transparent', 'bg-background/95');
+                    nav.classList.add('backdrop-blur-md', 'border-b', 'border-outline-variant');
+                } else {
+                    nav.classList.replace('bg-background/95', 'bg-transparent');
+                    nav.classList.remove('backdrop-blur-md', 'border-b', 'border-outline-variant');
+                }
+
+                // Apply Background Parallax
+                bgElements.forEach(el => {
+                    const speed = el.getAttribute('data-speed') || 0.2;
+                    const yPos = -(scrolled * speed);
+                    el.style.transform = `translate3d(0px, ${yPos}px, 0px)`;
+                });
+
+                // Apply Element Transform Parallax
+                elElements.forEach(el => {
+                    // Check if element is in viewport roughly to save performance
+                    const rect = el.getBoundingClientRect();
+                    if(rect.top < window.innerHeight && rect.bottom > 0) {
+                        const speed = el.getAttribute('data-speed') || 0.1;
+                        // Calculate offset relative to elements position in viewport
+                        const centerOffset = (rect.top + rect.height/2) - (window.innerHeight/2);
+                        const yPos = centerOffset * speed;
+                        el.style.transform = `translate3d(0px, ${yPos}px, 0px)`;
+                    }
+                });
+            });
+        });
+    </script>
+</body></html>
